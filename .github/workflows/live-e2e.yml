@@ -1,0 +1,60 @@
+name: live-e2e
+
+# Runs the live end-to-end suite against GenLayer Studionet and keeps the report.
+#
+# The validators must be able to read the evidence pages, so this workflow needs a PUBLIC site that
+# serves /evidence (your Cloudflare Pages deployment). To run without a public site, open a Codespace
+# and use `npm run e2e:codespace` instead (docs/e2e.md).
+
+on:
+  workflow_dispatch:
+    inputs:
+      site:
+        description: Public https origin that serves /evidence, for example https://goalpost-8wf.pages.dev
+        required: true
+      address:
+        description: Contract address (leave empty to use the repository variable CONTRACT_ADDRESS)
+        required: false
+      reports:
+        description: Reports to submit and evaluate
+        required: false
+        default: faithful,silent,disclosed,withheld
+      await_finality:
+        description: Wait for FINALIZED (slow)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  suite:
+    name: Live suite on Studionet
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - name: Run the suite
+        env:
+          GOALPOST_PRIVATE_KEY: ${{ secrets.GOALPOST_PRIVATE_KEY }}
+          CONTRACT_ADDRESS_INPUT: ${{ inputs.address }}
+          CONTRACT_ADDRESS_VAR: ${{ vars.CONTRACT_ADDRESS }}
+          SITE: ${{ inputs.site }}
+          REPORTS: ${{ inputs.reports }}
+          FINALITY: ${{ inputs.await_finality }}
+        run: |
+          ADDRESS="${CONTRACT_ADDRESS_INPUT:-$CONTRACT_ADDRESS_VAR}"
+          FLAGS=""
+          if [ "$FINALITY" = "true" ]; then FLAGS="--await-finality"; fi
+          npm run e2e:suite -- --site "$SITE" --address "$ADDRESS" --reports "$REPORTS" --integrity $FLAGS --out artifacts/report
+      - name: Keep the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: goalpost-live-e2e-report
+          path: artifacts/report/
+          if-no-files-found: warn
