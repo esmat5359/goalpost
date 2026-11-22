@@ -24,7 +24,7 @@ Target network: **GenLayer Studionet** (chain ID 61999). The web console is a st
 
 - **Live site:** <https://goalpost-8wf.pages.dev/>
 - **Source:** <https://github.com/reza9133/goalpost>
-- **Contract:** `0xe0167DeFD7b55bd4C120092Ee340078077186c3f` on Studionet is contract 1.3.0, with recorded end-to-end runs for every outcome in [`evidence/`](evidence/README.md). This repository is **1.4.0**, which needs a new deployment (see [CHANGELOG.md](CHANGELOG.md))
+- **Contract:** `0xF508F08DE201772a6B957De81347f30EFddd2caA` on Studionet is contract 1.4.0. Its live end-to-end run (51 of 51 invariant checks passed) is recorded in [`evidence/`](evidence/README.md). The previous contract 1.3.0 (`0xe0167DeFD7b55bd4C120092Ee340078077186c3f`) is kept only as historical evidence (see [CHANGELOG.md](CHANGELOG.md))
 
 ## What is new in 1.4.0
 
@@ -156,10 +156,10 @@ genlayer network set studionet
 genlayer deploy --contract contracts/goalpost.py
 ```
 
-**Live deployment.** The Studionet contract at `0xe0167DeFD7b55bd4C120092Ee340078077186c3f` is version 1.3.0 (publisher
-authority and per-element consensus). Version 1.4.0 is a new deployment: run `npm run deploy:contract -- --write-env`,
-rebuild the site with the new address, and record the new runs. Its recorded runs (kept, silent move, disclosed change, inconclusive and adversarial
-validator disagreement) are in [`evidence/`](evidence/README.md). To deploy your own copy, run
+**Live deployment.** The Studionet contract at `0xF508F08DE201772a6B957De81347f30EFddd2caA` is version 1.4.0. The site must be built with
+`VITE_CONTRACT_ADDRESS` set to this address. The live suite run against it (kept, silent move, disclosed change and
+inconclusive) is in [`evidence/`](evidence/README.md); the earlier 1.3.0 runs, including the adversarial validator
+disagreement, were recorded on the previous contract (`0xe0167DeFD7b55bd4C120092Ee340078077186c3f`). To deploy your own copy, run
 `npm run deploy:contract -- --write-env`, redeploy the site so the demonstration pledge pages carry their declaration,
 then run `npm run e2e:codespace` (or `npm run evidence`) to record every outcome.
 
