@@ -1,0 +1,636 @@
+{
+  "contract": "0xF508F08DE201772a6B957De81347f30EFddd2caA",
+  "version": "1.4.0",
+  "site": "https://ominous-space-rotary-phone-96qj54v74r57fpx6x-4173.app.github.dev",
+  "startedAt": "2026-11-22T13:05:17.669Z",
+  "finishedAt": "2026-11-22T13:10:51.010Z",
+  "steps": [
+    {
+      "kind": "hard",
+      "name": "evidence reachable: faithful",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "kind": "hard",
+      "name": "evidence reachable: silent",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "kind": "hard",
+      "name": "evidence reachable: disclosed",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "kind": "hard",
+      "name": "evidence reachable: withheld",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "kind": "hard",
+      "name": "contract is version 1.4 or newer",
+      "status": "PASS",
+      "detail": "version 1.4.0"
+    },
+    {
+      "kind": "hard",
+      "name": "contract reports the 1.4 features",
+      "status": "PASS",
+      "detail": "publisher_ledger, drift_matrix, pledge_search, softening_guard, disclosure_relevance"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: a title with a direction override",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: a title with a direction override",
+      "status": "PASS",
+      "detail": "title must not contain control, invisible or direction-changing characters"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: a pledge address with non-ASCII characters",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: a pledge address with non-ASCII characters",
+      "status": "PASS",
+      "detail": "pledge_url must be plain ASCII (percent-encode any other character)"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: a pledge on a host that has no publisher namespace",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: a pledge on a host that has no publisher namespace",
+      "status": "PASS",
+      "detail": "pledge_url is on bit.ly, which gives no publisher a namespace of its own, so reports cannot be bound to a publisher there"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: a quote that is not on the pledge page",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: a quote that is not on the pledge page",
+      "status": "PASS",
+      "detail": "the quote for element \"invented\" was not found verbatim on the pledge page"
+    },
+    {
+      "kind": "hard",
+      "name": "PLG-0001 froze every element",
+      "status": "PASS",
+      "detail": "3 elements"
+    },
+    {
+      "kind": "hard",
+      "name": "every frozen quote was verified on the live page",
+      "status": "PASS",
+      "detail": "VERIFIED"
+    },
+    {
+      "kind": "hard",
+      "name": "the pledge carries a publisher scope",
+      "status": "PASS",
+      "detail": "ominous-space-rotary-phone-96qj54v74r57fpx6x-4173.app.github.dev"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: registering the same pledge twice",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: registering the same pledge twice",
+      "status": "PASS",
+      "detail": "this pledge is already registered as PLG-0001"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: a report outside the frozen prefix",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: a report outside the frozen prefix",
+      "status": "PASS",
+      "detail": "report_url is outside the reporting prefix frozen with this pledge"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: a report address with a dot segment",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: a report address with a dot segment",
+      "status": "PASS",
+      "detail": "report_url must not contain dot segments"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: a report address with non-ASCII characters",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: a report address with non-ASCII characters",
+      "status": "PASS",
+      "detail": "report_url must be plain ASCII (percent-encode any other character)"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: a report address that hides another host in its userinfo",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: a report address that hides another host in its userinfo",
+      "status": "PASS",
+      "detail": "report_url must not contain credentials"
+    },
+    {
+      "kind": "hard",
+      "name": "search_pledges finds the pledge",
+      "status": "PASS",
+      "detail": "query \"Meridian\""
+    },
+    {
+      "kind": "hard",
+      "name": "get_drift answers for the pledge",
+      "status": "PASS",
+      "detail": "0 rows so far"
+    },
+    {
+      "kind": "hard",
+      "name": "publisher ledger, drift table and report index agree with the audits (before any audit)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "refused: faithful: queuing the same report twice",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: faithful: queuing the same report twice",
+      "status": "PASS",
+      "detail": "this report is already queued as AUD-0001"
+    },
+    {
+      "kind": "hard",
+      "name": "faithful: AUD-0001 is settled",
+      "status": "PASS",
+      "detail": "verdict KEPT"
+    },
+    {
+      "kind": "soft",
+      "name": "faithful: verdict is KEPT",
+      "status": "PASS",
+      "detail": "the network said KEPT"
+    },
+    {
+      "kind": "hard",
+      "name": "faithful: strikes moved by the right amount",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "faithful: the contract recomputes the stored attestation",
+      "status": "PASS",
+      "detail": "0xbf087c7772bc6d953395d6281d967685d262aa2de2101e7c8b36e667442a8215"
+    },
+    {
+      "kind": "hard",
+      "name": "faithful: the browser-side code recomputes the stored attestation",
+      "status": "PASS",
+      "detail": "0xbf087c7772bc6d953395d6281d967685d262aa2de2101e7c8b36e667442a8215"
+    },
+    {
+      "kind": "soft",
+      "name": "faithful: every accepted excerpt can be found in the report page",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "publisher ledger, drift table and report index agree with the audits (after faithful)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "refused: faithful: auditing a settled report again",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: faithful: auditing a settled report again",
+      "status": "PASS",
+      "detail": "this report was already audited as AUD-0001; publish corrections at a new URL"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: silent: queuing the same report twice",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: silent: queuing the same report twice",
+      "status": "PASS",
+      "detail": "this report is already queued as AUD-0002"
+    },
+    {
+      "kind": "hard",
+      "name": "silent: AUD-0002 is settled",
+      "status": "PASS",
+      "detail": "verdict MOVED_SILENTLY"
+    },
+    {
+      "kind": "soft",
+      "name": "silent: verdict is MOVED_SILENTLY",
+      "status": "PASS",
+      "detail": "the network said MOVED_SILENTLY"
+    },
+    {
+      "kind": "hard",
+      "name": "silent: strikes moved by the right amount",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "silent: the contract recomputes the stored attestation",
+      "status": "PASS",
+      "detail": "0x2b1929f82d47fad0bf8562c5914cd964b77ebee2f7ce37af9ebc2e01c8415a53"
+    },
+    {
+      "kind": "hard",
+      "name": "silent: the browser-side code recomputes the stored attestation",
+      "status": "PASS",
+      "detail": "0x2b1929f82d47fad0bf8562c5914cd964b77ebee2f7ce37af9ebc2e01c8415a53"
+    },
+    {
+      "kind": "soft",
+      "name": "silent: every accepted excerpt can be found in the report page",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "publisher ledger, drift table and report index agree with the audits (after silent)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "refused: silent: auditing a settled report again",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: silent: auditing a settled report again",
+      "status": "PASS",
+      "detail": "this report was already audited as AUD-0002; publish corrections at a new URL"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: disclosed: queuing the same report twice",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: disclosed: queuing the same report twice",
+      "status": "PASS",
+      "detail": "this report is already queued as AUD-0003"
+    },
+    {
+      "kind": "hard",
+      "name": "disclosed: AUD-0003 is settled",
+      "status": "PASS",
+      "detail": "verdict MOVED_DISCLOSED"
+    },
+    {
+      "kind": "soft",
+      "name": "disclosed: verdict is MOVED_DISCLOSED",
+      "status": "PASS",
+      "detail": "the network said MOVED_DISCLOSED"
+    },
+    {
+      "kind": "hard",
+      "name": "disclosed: strikes moved by the right amount",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "disclosed: the contract recomputes the stored attestation",
+      "status": "PASS",
+      "detail": "0x5af3f2b02dd062190e71bd24d6fda58ce9239dea689bea3ce7dae5bc415e58f2"
+    },
+    {
+      "kind": "hard",
+      "name": "disclosed: the browser-side code recomputes the stored attestation",
+      "status": "PASS",
+      "detail": "0x5af3f2b02dd062190e71bd24d6fda58ce9239dea689bea3ce7dae5bc415e58f2"
+    },
+    {
+      "kind": "soft",
+      "name": "disclosed: every accepted excerpt can be found in the report page",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "publisher ledger, drift table and report index agree with the audits (after disclosed)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "refused: disclosed: auditing a settled report again",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: disclosed: auditing a settled report again",
+      "status": "PASS",
+      "detail": "this report was already audited as AUD-0003; publish corrections at a new URL"
+    },
+    {
+      "kind": "hard",
+      "name": "refused: withheld: queuing the same report twice",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "info",
+      "name": "reason given for: withheld: queuing the same report twice",
+      "status": "PASS",
+      "detail": "this report is already queued as AUD-0004"
+    },
+    {
+      "kind": "hard",
+      "name": "withheld: AUD-0004 is settled",
+      "status": "PASS",
+      "detail": "verdict INCONCLUSIVE"
+    },
+    {
+      "kind": "soft",
+      "name": "withheld: verdict is INCONCLUSIVE",
+      "status": "PASS",
+      "detail": "the network said INCONCLUSIVE (EMPTY)"
+    },
+    {
+      "kind": "hard",
+      "name": "withheld: strikes moved by the right amount",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "withheld: the contract recomputes the stored attestation",
+      "status": "PASS",
+      "detail": "0xe3a427554a9ff5e07ad1a57aecb14d237aa018cf416d9a7d3232ef272f5f0f13"
+    },
+    {
+      "kind": "hard",
+      "name": "withheld: the browser-side code recomputes the stored attestation",
+      "status": "PASS",
+      "detail": "0xe3a427554a9ff5e07ad1a57aecb14d237aa018cf416d9a7d3232ef272f5f0f13"
+    },
+    {
+      "kind": "soft",
+      "name": "withheld: every accepted excerpt can be found in the report page",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "publisher ledger, drift table and report index agree with the audits (after withheld)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "kind": "hard",
+      "name": "the ledger counted every new pledge",
+      "status": "PASS",
+      "detail": "+1"
+    },
+    {
+      "kind": "hard",
+      "name": "settled audits never exceed audits",
+      "status": "PASS",
+      "detail": "4 of 4"
+    },
+    {
+      "kind": "hard",
+      "name": "the publisher count covers every scope",
+      "status": "PASS",
+      "detail": "1"
+    }
+  ],
+  "transactions": [
+    {
+      "label": "register_pledge (refused): a title with a direction override",
+      "hash": "0xf0b317be04de708fd4efd9b07a65421858a09ed6cbf78b0d918861d91ba66ef9",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "register_pledge (refused): a pledge address with non-ASCII characters",
+      "hash": "0x15203a78fe327ec1563eae709818259e0e06bca9a226bd2d24fbdab9297cf5a9",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "register_pledge (refused): a pledge on a host that has no publisher namespace",
+      "hash": "0xdaf018773ddd7045a8e4fba8671cdceeb99a0b767c790308b4f8348f08547268",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "register_pledge (refused): a quote that is not on the pledge page",
+      "hash": "0x1929c5e0785968308fe88377177a8932b0a56b3a781b18a26f77a39eb214e85e",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "register_pledge",
+      "hash": "0xd58c40fb11e4dd8361dee67f459f8aa62caaa1e719c1564eb1909ed54ed0d12e",
+      "statusName": "ACCEPTED",
+      "execution": "success",
+      "finality": "accepted"
+    },
+    {
+      "label": "register_pledge (refused): registering the same pledge twice",
+      "hash": "0x3bc01488c49226daf127b04b05bdf824aeefa2d04e32529e6e3a62c968321a63",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "submit_report (refused): a report outside the frozen prefix",
+      "hash": "0xa460c1ccfea5dede5e1b2506c57000b8930bd3140b4b2c27fac749dd71155072",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "submit_report (refused): a report address with a dot segment",
+      "hash": "0xc1f14485f6d72d849b95aba3eff9994504981623497e0c88cc436066f95fde21",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "submit_report (refused): a report address with non-ASCII characters",
+      "hash": "0xe9c7a13b6ff800f790ed17ae997e32c96c5d22bbabbb40558c4995d2f3d82177",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "submit_report (refused): a report address that hides another host in its userinfo",
+      "hash": "0x22684ac551280076ffe8e1411e95a8d4b59b65a66ce2e2f19c64f74289865cbb",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "submit_report faithful",
+      "hash": "0xd5bfd6cbc13136d6b058848b518e412c7022fb2ad32e1bcc01bafccf494b48d9",
+      "statusName": "ACCEPTED",
+      "execution": "success",
+      "finality": "accepted"
+    },
+    {
+      "label": "submit_report (refused): faithful: queuing the same report twice",
+      "hash": "0xed178aa7f93f966b4ce2b4395dc40a4bb772454ddb0c91ec35692d7b729d814f",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "evaluate_report faithful (validators read the report; this can take minutes)",
+      "hash": "0xbf3a8f9bf290c5e6425390a1d6d6255c14264abc9458559c00f4cf0f2ed33502",
+      "statusName": "ACCEPTED",
+      "execution": "success",
+      "finality": "accepted"
+    },
+    {
+      "label": "submit_report (refused): faithful: auditing a settled report again",
+      "hash": "0x9050e84521e049fbbc0d5cdd02dabdd0317ded01f350e5aa78d517a5b6898494",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "submit_report silent",
+      "hash": "0x46f266184a4f044afd75572432aed6d9955944059a948d81e9eaf530c3c5803d",
+      "statusName": "ACCEPTED",
+      "execution": "success",
+      "finality": "accepted"
+    },
+    {
+      "label": "submit_report (refused): silent: queuing the same report twice",
+      "hash": "0x22e8e7daa55063272f472a6947f00d868f4589b20ad1062095c9134e8365c401",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "evaluate_report silent (validators read the report; this can take minutes)",
+      "hash": "0x87f5e2c6dec055ec7bc288a50ddbeb87562cf68f27e5bd65381d58f740869071",
+      "statusName": "ACCEPTED",
+      "execution": "success",
+      "finality": "accepted"
+    },
+    {
+      "label": "submit_report (refused): silent: auditing a settled report again",
+      "hash": "0x5cabc930bc66e23d1492e926deccfac21868a14f43a40d1347036e999a68bed6",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "submit_report disclosed",
+      "hash": "0x0153d91b71ce091935c90ccd6e1ffd8972e40bb2b0e2e60d4c6731e830622b10",
+      "statusName": "ACCEPTED",
+      "execution": "success",
+      "finality": "accepted"
+    },
+    {
+      "label": "submit_report (refused): disclosed: queuing the same report twice",
+      "hash": "0x908205ea86c1d02da56f17fb47b08e2da3210070cd702b18d857eff73e44d07c",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "evaluate_report disclosed (validators read the report; this can take minutes)",
+      "hash": "0x596d98c7903cefd4e421989bd0eddf8df97cb2032b9f3955a716b0b611cc128c",
+      "statusName": "ACCEPTED",
+      "execution": "success",
+      "finality": "accepted"
+    },
+    {
+      "label": "submit_report (refused): disclosed: auditing a settled report again",
+      "hash": "0xc6c3ea89a0b73fb7876c29a300a3afcc29c3283ab9e3c66af9b1a888faca2bb4",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "submit_report withheld",
+      "hash": "0x16f8f60bb4dd360976bf38dde7f64cc2e3d203de3f3999683aaa901c9382df19",
+      "statusName": "ACCEPTED",
+      "execution": "success",
+      "finality": "accepted"
+    },
+    {
+      "label": "submit_report (refused): withheld: queuing the same report twice",
+      "hash": "0x13dbcf57efa6e931cf4c563aa1f477ec18728861f146e8a0bbe8bbed5bb6b20e",
+      "statusName": "ACCEPTED",
+      "execution": "failed",
+      "finality": null
+    },
+    {
+      "label": "evaluate_report withheld (validators read the report; this can take minutes)",
+      "hash": "0x0ac82fc4ad068fee87b6a79ce5f7f8c435ab665e076f7b1a174af9dc13a603e4",
+      "statusName": "ACCEPTED",
+      "execution": "success",
+      "finality": "accepted"
+    }
+  ]
+}

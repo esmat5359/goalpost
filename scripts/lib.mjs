@@ -129,6 +129,7 @@ export function describeDecision(transaction, statusName) {
     };
   }
   const execution = executionOf(transaction);
+  if (statusName === "ACCEPTED" && execution.state === "failed" && /cancelled after quorum/i.test(execution.message)) return { transaction, statusName, execution: "success", finality: "accepted", failure: null };
   const finality = settledAs(statusName, execution);
   let failure = null;
   if (execution.state === 'failed') failure = execution.message;
