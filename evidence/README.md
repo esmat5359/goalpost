@@ -5,7 +5,10 @@ nothing in this folder is written by hand or generated without a network run (`n
 
 ## Status
 
-All rows are recorded on contract 1.3.0 at `0xe0167DeFD7b55bd4C120092Ee340078077186c3f` (Studionet), on 2026-10-14.
+Two generations of records live here.
+
+- **Contract 1.4.0 (current)** at `0xF508F08DE201772a6B957De81347f30EFddd2caA` (Studionet): the live suite report [`e2e-suite-1.4.0-2026-11-22-13-10-51.md`](e2e-suite-1.4.0-2026-11-22-13-10-51.md), recorded on 2026-11-22. Result: **PASSED**, 51 of 51 invariant checks, with the verdicts `KEPT`, `MOVED_SILENTLY`, `MOVED_DISCLOSED` and `INCONCLUSIVE` as expected. The adversarial validator disagreement scenario is not part of this run.
+- **Contract 1.3.0 (previous)** at `0xe0167DeFD7b55bd4C120092Ee340078077186c3f` (Studionet), recorded on 2026-10-14. These are the five single-outcome files below; they stay unchanged as history.
 
 | Outcome | Status | Record |
 | --- | --- | --- |
@@ -23,7 +26,7 @@ and not yet `FINALIZED`.
 
 ```bash
 npm install
-npm run deploy:contract -- --write-env           # contract 1.3.0
+npm run deploy:contract -- --write-env           # contract 1.4.0
 # deploy the site (Cloudflare Pages) so /evidence and /evidence/flapping are public, then:
 npm run evidence -- --site https://YOUR-SITE.pages.dev --await-finality
 ```
@@ -58,5 +61,7 @@ Anyone can check them directly against the Studionet RPC:
 `npm run e2e:codespace` and `npm run e2e:suite` write `e2e-suite-<version>-<timestamp>.md` and `.json` here
 (see [`docs/e2e.md`](../docs/e2e.md)). Unlike the files above, which each record one outcome, a suite report records
 every check of one run: the inputs the contract refused, the audits, the cross-checks of the publisher ledger, the
-drift table and the attestation, and every transaction with its explorer link. No suite report is included yet,
-because the suite has not been run against Studionet; the files above were recorded on contract 1.3.0.
+drift table and the attestation, and every transaction with its explorer link.
+
+The first suite report is [`e2e-suite-1.4.0-2026-11-22-13-10-51.md`](e2e-suite-1.4.0-2026-11-22-13-10-51.md) (and its `.json`), run on 2026-11-22 against contract 1.4.0 at `0xF508F08DE201772a6B957De81347f30EFddd2caA`.
+The single-outcome files above were recorded on contract 1.3.0.
